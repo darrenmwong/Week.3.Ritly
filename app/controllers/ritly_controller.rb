@@ -59,8 +59,13 @@ class RitlyController < ApplicationController
 	def go
 		random = params[:random]
 		@ritly = Bitly.find_by_random(random)
-
 		redirect_to "http://#{@ritly.url}"
+	end
+
+	def go_preview
+		random = params[:random]
+		@ritly = Bitly.find_by_random(random)
+		render :preview
 	end
 
 end
