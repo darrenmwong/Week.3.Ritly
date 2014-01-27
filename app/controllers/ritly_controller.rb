@@ -65,6 +65,7 @@ class RitlyController < ApplicationController
 	def go_preview
 		random = params[:random]
 		@ritly = Bitly.find_by_random(random)
+		snap = WebSnap::Snapper.new('google.com', :format => 'png')
 		render :preview
 	end
 

@@ -5,6 +5,8 @@ group :development do
   gem 'rails_layout'
 end
 
+gem 'websnap'
+
 gem 'pry'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.0.2'

@@ -1,7 +1,7 @@
 
 <%= form_for :bitly, method: :post, url: "edit" do |f|%>
-<%= f.text_field :name, placeholder: @ritly.name %> <br>
-<%= f.text_field :url, placeholder: @ritly.url %><br>
+<%= f.text_field :name, value: @ritly.name %> <br>
+<%= f.text_field :url, value: @ritly.url %><br>
 <%= f.text_field :random, value: @ritly.random %>
 <%= f.hidden_field :id, value: @ritly.id %>
 <br>
