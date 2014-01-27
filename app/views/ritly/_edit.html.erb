@@ -1,10 +1,16 @@
-
+<div class="container">
+	<div class="col-md-12 text-center">
+		<div class="jumbotron">
+			<h1> Edit Your Ritly </h1>
+		</div>
 <%= form_for :bitly, method: :post, url: "edit" do |f|%>
-<%= f.text_field :name, value: @ritly.name %> <br>
-<%= f.text_field :url, value: @ritly.url %><br>
-<%= f.text_field :random, value: @ritly.random %>
+NAME: <%= f.text_field :name, value: @ritly.name %> <br><br>
+URL: <%= f.text_field :url, value: @ritly.url %><br><br>
+RNG:  <%= f.text_field :random, value: @ritly.random %><br>
 <%= f.hidden_field :id, value: @ritly.id %>
 <br>
 <%= f.submit class: "btn btn-primary"  %>
 
 <% end %>
+</div>
+</div>

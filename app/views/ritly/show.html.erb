@@ -1,11 +1,11 @@
 <div class="container">
 	<div class="row">
-		<div clas="col-md-12 text-center">
+		<div class="col-md-12 text-center">
 			<% @ritly.map do |info| %>
-       		     <%= info["name"] %><br>
-     		      <%= info["url"] %> <br>
-    <a href="http://<%= info["url"] %>">localhost:3000/go/<%= info["random"] %><br></a>
-  <a href="/go/<%= info["random"] %>/preview">Preview</a><br>
+       		   <strong> Name: </strong><%= info["name"] %><br>
+     		   <strong> Url: </strong> <%= info["url"] %> <br>
+    <a href="http://<%= info["url"] %>">localhost:3000/go/<%= info["random"] %></a>
+    <a href="/go/<%= info["random"] %>/preview">Preview</a><br>
 
     <%= form_for :bitly, method: :get, url: "#{info["id"]}/edit"  do |f|%>
     <%= f.hidden_field :id, value: info["id"] %>
