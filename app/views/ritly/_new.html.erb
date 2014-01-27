@@ -1,0 +1,9 @@
+<%= form_for :bitly, method: :post, url: ritly_path do |f|%>
+<%= f.text_field :name, placeholder: "enter name" %> <br>
+<%= f.text_field :url, placeholder: "website url" %><br>
+<%= f.text_field :random, value: @random %>
+<br>
+
+<%= f.submit class: "btn btn-primary"  %>
+
+<% end %>

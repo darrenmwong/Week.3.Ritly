@@ -1,0 +1,25 @@
+<div class="container">
+	<div class="row">
+		<div clas="col-md-12 text-center">
+			<% @ritly.map do |info| %>
+       		     <%= info["name"] %><br>
+     		      <%= info["url"] %> <br>
+    <a href="http://<%= info["url"] %>">localhost:3000/go/<%= info["random"] %><br></a>
+    <%= form_for :bitly, method: :get, url: "#{info["id"]}/edit"  do |f|%>
+    <%= f.hidden_field :id, value: info["id"] %>
+    <%= f.submit "edit", class: "btn btn-sm square" %>
+    <% end %>
+
+    <%= form_for :bitly, method: :delete, url: "#{info["id"]}/delete" do |f|%>
+    <%= f.hidden_field :id, value: info["id"] %>
+    <%= f.submit "delete", class: "btn btn-sm btn-danger square" %>
+    <% end %>
+    <br>
+    <% end %>
+        </div>
+    </div>
+</div>
+
+      
+
+
