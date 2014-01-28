@@ -7,12 +7,7 @@ class RitlyController < ApplicationController
 	def create
 		random = params[:random]
 		new_ritly = params.require(:bitly).permit(:name, :random, :url)
-		# if Bitly.where(random: new_ritly[:random]).exists?
-			# new_ritly[:random] == ""
 		ritly = Bitly.create(new_ritly)
-		# new_url = SecureRandom.urlsafe_base64(ritly.random.length)
-	# 	ritly.update(new_url: new_url)
-	# end
 		redirect_to "/ritly/#{ritly.random}"
 	end
 

@@ -5,7 +5,11 @@ group :development do
   gem 'rails_layout'
 end
 
+gem 'protected_attributes'
+
 gem 'websnap'
+
+# gem 'bcrypt-ruby', '3.0.1'
 
 gem 'pry'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
@@ -41,7 +45,7 @@ group :doc do
 end
 
 # Use ActiveModel has_secure_password
-# gem 'bcrypt-ruby', '~> 3.1.2'
+gem 'bcrypt-ruby', '~> 3.1.2'
 
 # Use unicorn as the app server
 # gem 'unicorn'

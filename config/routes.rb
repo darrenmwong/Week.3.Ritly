@@ -1,5 +1,12 @@
 Ritly::Application.routes.draw do
+ resources :users, :sessions
   root to: 'ritly#index'
+
+  get '/signup' => 'users#new'
+
+  delete '/signout', to: 'sessions#destroy'
+
+  get '/signin' => 'sessions#new'
 
   get '/new', to: 'ritly#new'
 
